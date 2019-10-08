@@ -32,6 +32,12 @@ spring:
     max-idle: 5
     min-idle: 5
     removeAbandoned: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost:
       
   jpa:
       # The SQL dialect makes Hibernate generate better SQL for the chosen database
@@ -95,6 +101,8 @@ onesaitplatform: #Config onesait Platform specific
   iotbroker.plugable:
     gateway:
       stomp:
+        enable: true
+      amqp:
         enable: true
       moquette:
         enable: true
